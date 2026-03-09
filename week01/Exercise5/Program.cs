@@ -7,14 +7,16 @@ class Program
 
     {
         //For this assignment, write a C# program that has several simple functions:
-        DisplayWelcome();
+        {
+            DisplayWelcome();
 
-        string userName = PromptUserName();
-        int userNumber = PromptUserNumber();
+            string userName = PromptUserName();
+            int userNumber = PromptUserNumber();
 
-        int squaredNumber = SquareNumber(userNumber);
+            int squaredNumber = SquareNumber(userNumber);
 
-        DisplayResult(userName, squaredNumber);
+            DisplayResult(userName, squaredNumber);
+        }
 
         //DisplayWelcome - Displays the message, "Welcome to the Program!"
         static void DisplayWelcome()
