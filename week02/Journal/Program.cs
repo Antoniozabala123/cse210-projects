@@ -27,7 +27,7 @@ class Program
             {
                 string prompt = generator.GetRandomPrompt();
                 Console.WriteLine("Prompt: " + prompt);
-                Console.Write("Your entry: ");
+                Console.Write($"Date {DateTime.Now} ");
                 string entryText = Console.ReadLine() ?? "";
 
                 Entry newEntry = new Entry
