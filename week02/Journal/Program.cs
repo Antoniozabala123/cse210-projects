@@ -50,12 +50,9 @@ class Program
             }
             else if (choice == "3")
             {
-                Console.Write("Enter filename (e.g. journal.txt): ");
-                string filename = Console.ReadLine()?.Trim();
-                if (string.IsNullOrEmpty(filename))
-                {
-                    filename = "journal.txt";
-                }
+                string filename = "people.txt";
+                
+                using (StreamWriter outputfile = new StreamWriter(filename))
 
                 thejournal.SaveToFile(filename);
                 Console.WriteLine("Journal saved. Press Enter...");
@@ -65,7 +62,7 @@ class Program
             {
                 Console.Write("Enter filename to load: ");
                 string filename = Console.ReadLine()?.Trim();
-                if (string.IsNullOrEmpty(filename))
+                
                 {
                     filename = "journal.txt";
                 }
@@ -76,12 +73,12 @@ class Program
             }
             else if (choice == "5")
             {
-                Console.WriteLine("\nGoodbye! Thanks for using the journal.");
+                Console.WriteLine("Goodbye! Thanks for using the journal.");
 
             }
             else
             {
-                Console.WriteLine("\nInvalid option. Please choose 1-5.");
+                Console.WriteLine("Invalid option. Please choose 1-5.");
                 Console.WriteLine("Press Enter to try again...");
                 Console.ReadLine();
             }
