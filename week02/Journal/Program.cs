@@ -22,7 +22,7 @@ class Program
             Console.WriteLine("Choose an option");
 
             string choice = Console.ReadLine();
-
+            //The first option, using the get random Prompts method, generates a random question from this Generator Prompts file.
             if (choice == "1")
             {
                 string prompt = generator.GetRandomPrompt();
@@ -41,6 +41,7 @@ class Program
                 Console.WriteLine("Entry added! Press Enter to continue...");
                 Console.ReadLine();
             }
+            //It iterates through the list and displays all entries. If it is empty, it notifies the user.
             else if (choice == "2")
             {
                 thejournal.DisplayAll();
@@ -48,21 +49,25 @@ class Program
                 Console.WriteLine("\nPress Enter to return to menu...");
                 Console.ReadLine();
             }
+            // people can save up comment in archive txt 
+
             else if (choice == "3")
             {
                 string filename = "people.txt";
-                
-                using (StreamWriter outputfile = new StreamWriter(filename))
 
-                thejournal.SaveToFile(filename);
+                using (StreamWriter writer = new StreamWriter(filename))
+
+
+                    thejournal.SaveToFile(filename);
                 Console.WriteLine("Journal saved. Press Enter...");
                 Console.ReadLine();
             }
+            //Check if the file physically exists on the disk
             else if (choice == "4")
             {
                 Console.Write("Enter filename to load: ");
                 string filename = Console.ReadLine()?.Trim();
-                
+
                 {
                     filename = "journal.txt";
                 }
@@ -71,6 +76,8 @@ class Program
                 Console.WriteLine("Journal loaded. Press Enter...");
                 Console.ReadLine();
             }
+            // option finishing program for user
+
             else if (choice == "5")
             {
                 Console.WriteLine("Goodbye! Thanks for using the journal.");

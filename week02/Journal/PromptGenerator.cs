@@ -1,8 +1,11 @@
 public class PromptGenerator
 {
+    // List containing the predefined prompts
     public List<string> _Prompts;
     public PromptGenerator()
+
     {
+        // list question generator prompts 
         _Prompts = new List<string>
         {
             "What was the best part of your day?",
@@ -17,6 +20,7 @@ public class PromptGenerator
             "What small win did you have today?"
         };
     }
+    //Select and return a random question from the list
     public string GetRandomPrompt()
 
     {
