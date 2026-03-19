@@ -6,7 +6,16 @@ class Program
     {
         Journal thejournal = new Journal();
         PromptGenerator generator = new PromptGenerator();
+        // Write a new entry - Show the user a random prompt(from a list that you create), and save their response, the prompt, and the date as an Entry.
 
+        //Display the journal - Iterate through all entries in the journal and display them to the screen.
+        //Save the journal to a file -Prompt the user for a filename and then save the current journal(the complete list of entries) to that file location.
+        //Load the journal from a file -Prompt the user for a filename and then load the journal(a complete list of entries) from that file.This should replace any entries currently stored the journal.
+        //Provide a menu that allows the user choose these options
+        //Your list of prompts must contain at least five different prompts.Make sure to add your own prompts to the list, but the following are examples to help get you started:
+        // 1. Dynamic File Management: The logic was corrected so that the user can choose custom filenames or use the default.
+        // 2.Error Validation: A physical check(File.Exists) was added before loading, preventing the program from becoming true.
+        // Data Formatting: A special delimiter (||) is used to ensure that if the user enters commas, the file is not corrupted.
 
         Console.WriteLine("Welcome to the journal program! ");
 
@@ -53,12 +62,17 @@ class Program
 
             else if (choice == "3")
             {
-                string filename = "people.txt";
+                Console.Write("Save as: ");
+                string filename = Console.ReadLine();
 
-                using (StreamWriter writer = new StreamWriter(filename))
 
+                if (filename == "")
+                {
+                filename = "people.txt"; 
+                    
+                }
 
-                    thejournal.SaveToFile(filename);
+                thejournal.SaveToFile(filename);
                 Console.WriteLine("Journal saved. Press Enter...");
                 Console.ReadLine();
             }
@@ -69,7 +83,7 @@ class Program
                 string filename = Console.ReadLine()?.Trim();
 
                 {
-                    filename = "journal.txt";
+                    filename = "people.txt";
                 }
 
                 thejournal.LoadFromFile(filename);

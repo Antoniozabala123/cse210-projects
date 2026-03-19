@@ -27,11 +27,10 @@ public class Journal
     // people can save up comment in archive txt 
     public void SaveToFile(string file)
     {
-
+        using (StreamWriter writer = new StreamWriter(file))
         {
             foreach (Entry entry in _entries)
-
-                using (StreamWriter writer = new StreamWriter(file))
+                
                 {
                     writer.WriteLine($"{entry._date}|{entry._promptText}|{entry._entryText}");
                 }
