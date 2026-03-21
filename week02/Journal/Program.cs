@@ -65,8 +65,8 @@ class Program
                 Console.Write("Save as: ");
                 string filename = Console.ReadLine();
 
+                if (string.IsNullOrEmpty(filename))
 
-                if (filename == "")
                 {
                 filename = "people.txt"; 
                     
@@ -82,6 +82,7 @@ class Program
                 Console.Write("Enter filename to load: ");
                 string filename = Console.ReadLine()?.Trim();
 
+                if (string.IsNullOrEmpty(filename))
                 {
                     filename = "people.txt";
                 }
