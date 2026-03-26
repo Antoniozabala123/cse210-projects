@@ -1,7 +1,5 @@
 using System;
-using System.Collections;
-using System.Reflection.Metadata;
-using System.Runtime.CompilerServices;
+namespace ScriptureMemorizer;
 
 public class Word
 {
@@ -24,7 +22,7 @@ public class Word
         _isHidden = false;
 
     }
-    public Bool Ishidden()
+    public Bool IsHidden()
     {
         return _isHidden;
     }
@@ -33,11 +31,11 @@ public class Word
     {
         {
             if (_isHidden)
-                return ('_', text_length);
+                return ('_', text.length);
 
             else
 
                 return _text;
         }
-    } 
+    }
 }

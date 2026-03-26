@@ -1,5 +1,5 @@
 using System;
-using System.Collections.Generic;
+namespace ScriptureMemorizer;
 
 public class Reference
 {
@@ -11,24 +11,24 @@ public class Reference
 
     private int _endverse;
 
-    public Reference(string _book, int _chapter, int _verse, int _endverse)
+    public Reference(string book, int chapter, int verse, int endverse)
     {
-        _book = _book;
+        _book = book;
 
-        _chapter = _chapter;
+        _chapter = chapter;
 
-        _verse = _verse;
+        _verse = verse;
 
-        _endverse = _endverse;
+        _endverse = endverse;
     }
-    public void references(string book, int chapter, int verse)
+    public References(string book, int chapter, int verse)
     {
         _book = book;
         _chapter = chapter;
         _verse = verse;
     }
 
-    public void references(string book, int chapter, int verse, int endverse)
+    public References(string book, int chapter, int verse, int endverse)
     {
         _book = book;
         _chapter = chapter;
@@ -36,7 +36,7 @@ public class Reference
         _endverse = endverse;
     }
 
-    public void GetDisplayText()
+    public string GetDisplayText()
     {
         {
             if (_endverse == 0)
@@ -48,5 +48,5 @@ public class Reference
                 return $"{_book} {_chapter}:{_verse}{_endverse}";
             }
         }
-    } 
+    }
 }
