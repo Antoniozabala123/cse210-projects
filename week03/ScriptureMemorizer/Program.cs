@@ -8,30 +8,36 @@ class Program
 {
     static void Main(string[] args)
     {
-        // 1. Configuración inicial
-        Reference reference = new Reference("Proverbios", 3, 5, 6);
-        Scripture scripture = new Scripture(reference, "Fíate de Jehová de todo tu corazón y no te apoyes en tu propia prudencia");
+        
+        // 1. this  first part
+        Reference reference = new Reference("Proverbs", 3, 5, 6);
+        Scripture scripture = new Scripture(reference, "Trust in the lord all thine heart and lean not unto thine own understanding in all thy wat acknowledge him, and he shall direct thy paths.");
 
         string input = "";
 
-        // 2. Bucle principal
+        // 2. Bucle 
         while (input.ToLower() != "quit" && !scripture.IsCompletelyHidden())
         {
             Console.Clear();
+            string date = DateTime.Now.ToString("hh:mm:ss tt");
+            Console.WriteLine($"date to practice: {date}");
             Console.WriteLine(scripture.GetDisplayText());
-            Console.WriteLine("\nPresiona Enter para ocultar palabras o escribe 'quit' para salir:");
+            Console.WriteLine("\npresss enter to continue or type 'quit' to finish:");
+        
+            
 
             input = Console.ReadLine();
 
             if (input.ToLower() != "quit")
             {
-                scripture.HideRandomWords(3); // Oculta 3 palabras cada vez
+                scripture.HideRandomWords(1); // hide word
             }
         }
 
-        // Mostrar el estado final antes de cerrar
+        // finish program quit 
         Console.Clear();
         Console.WriteLine(scripture.GetDisplayText());
-        Console.WriteLine("\n¡Felicidades! Has terminado.");
+        Console.WriteLine("\nthis programs is over.");
     }
+
 }

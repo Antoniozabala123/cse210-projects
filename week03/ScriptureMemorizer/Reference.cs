@@ -21,20 +21,14 @@ public class Reference
 
         _endverse = endverse;
     }
-    public References(string book, int chapter, int verse)
+    public Reference(string book, int chapter, int verse)
     {
         _book = book;
         _chapter = chapter;
         _verse = verse;
     }
 
-    public References(string book, int chapter, int verse, int endverse)
-    {
-        _book = book;
-        _chapter = chapter;
-        _verse = verse;
-        _endverse = endverse;
-    }
+
 
     public string GetDisplayText()
     {

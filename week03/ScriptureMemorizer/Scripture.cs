@@ -12,7 +12,7 @@ public class Scripture
         _reference = reference;
         _words = new List<Word>();
 
-        // Dividimos el texto en palabras y creamos objetos Word
+    
         string[] splitWords = text.Split(' ');
         foreach (string wordText in splitWords)
         {
@@ -25,13 +25,13 @@ public class Scripture
         Random random = new Random();
         int hiddenCount = 0;
 
-        // Intentamos ocultar palabras hasta alcanzar el número o quedarnos sin palabras
+        
         while (hiddenCount < numberToHide && !IsCompletelyHidden())
         {
             int index = random.Next(_words.Count);
             if (!_words[index].IsHidden())
             {
-                _words[index].Hide();
+                _words[index].hide();
                 hiddenCount++;
             }
         }

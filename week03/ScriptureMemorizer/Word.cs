@@ -22,7 +22,7 @@ public class Word
         _isHidden = false;
 
     }
-    public Bool IsHidden()
+    public bool IsHidden()
     {
         return _isHidden;
     }
@@ -31,7 +31,7 @@ public class Word
     {
         {
             if (_isHidden)
-                return ('_', text.length);
+                return new string ('_', _text.Length);
 
             else
 
