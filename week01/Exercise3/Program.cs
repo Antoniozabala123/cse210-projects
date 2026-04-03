@@ -14,7 +14,7 @@ class Program
         while (guess != number)
         {
             Console.Write("What is your guess? ");
-             guess = int.Parse(Console.ReadLine());
+            guess = int.Parse(Console.ReadLine());
 
             if (number > guess)
             {

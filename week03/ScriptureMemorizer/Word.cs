@@ -12,26 +12,15 @@ public class Word
         _isHidden = false;
 
     }
-    public void hide()
-    {
-        _isHidden = true;
-
-    }
-    public void show()
-    {
-        _isHidden = false;
-
-    }
-    public bool IsHidden()
-    {
-        return _isHidden;
-    }
+    public void hide() => _isHidden = true;
+    public void show() => _isHidden = false;
+    public bool IsHidden() => _isHidden;
 
     public string GetDisplayText()
     {
         {
             if (_isHidden)
-                return new string ('_', _text.Length);
+                return new string('_', _text.Length);
 
             else
 

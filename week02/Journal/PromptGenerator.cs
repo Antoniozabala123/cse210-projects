@@ -25,7 +25,7 @@ public class PromptGenerator
 
     {
         Random random = new Random();
-        int index = random.Next(_Prompts.Count);   
+        int index = random.Next(_Prompts.Count);
         return _Prompts[index];
     }
 

@@ -68,8 +68,8 @@ class Program
                 if (string.IsNullOrEmpty(filename))
 
                 {
-                filename = "people.txt"; 
-                    
+                    filename = "people.txt";
+
                 }
 
                 thejournal.SaveToFile(filename);

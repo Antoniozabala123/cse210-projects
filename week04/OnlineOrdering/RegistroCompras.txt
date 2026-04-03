@@ -1,0 +1,8 @@
+Shipping Label:Maria Lopez123 Main St New York, NYUSA
+Packing Label:
+TOTAL: $5
+--------------------
+Shipping Label:Maria Lopez123 Main St New York, NYUSA
+Packing Label:Mechanical Keyboard (ID: System.Func`1[System.String])Mechanical Keyboard (ID: System.Func`1[System.String])
+TOTAL: $184,98
+--------------------

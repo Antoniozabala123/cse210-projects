@@ -12,7 +12,7 @@ public class Scripture
         _reference = reference;
         _words = new List<Word>();
 
-    
+
         string[] splitWords = text.Split(' ');
         foreach (string wordText in splitWords)
         {
@@ -25,7 +25,7 @@ public class Scripture
         Random random = new Random();
         int hiddenCount = 0;
 
-        
+
         while (hiddenCount < numberToHide && !IsCompletelyHidden())
         {
             int index = random.Next(_words.Count);
@@ -48,8 +48,5 @@ public class Scripture
         return $"{_reference.GetDisplayText()} - {textContent.Trim()}";
     }
 
-    public bool IsCompletelyHidden()
-    {
-        return _words.All(w => w.IsHidden());
-    }
+    public bool IsCompletelyHidden() => _words.All(w => w.IsHidden());
 }

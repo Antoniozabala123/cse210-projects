@@ -38,7 +38,7 @@ class Program
             return UserNumber;
         }
         //SquareNumber - Accepts an integer as a parameter and returns that number squared (as an integer)
-        static int SquareNumber (int number)
+        static int SquareNumber(int number)
         {
             int SquareNumber = number * number;
             return SquareNumber;
