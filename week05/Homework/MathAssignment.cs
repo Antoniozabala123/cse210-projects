@@ -1,3 +1,4 @@
+using System;
 namespace Homework;
 
 public class MathAssignment : Assignment
