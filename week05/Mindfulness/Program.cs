@@ -1,4 +1,5 @@
 using System;
+using EternalQuest; // Asegúrate de tener esta línea
 
 namespace EternalQuest
 {
@@ -6,9 +7,9 @@ namespace EternalQuest
     {
         static void Main(string[] args)
         {
+            // Aquí es donde creas el objeto
             GoalManager manager = new GoalManager();
             manager.Start();
         }
     }
 }
-   

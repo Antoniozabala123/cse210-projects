@@ -1,6 +1,15 @@
 using System;
+using EternalQuest; // Asegúrate de tener esta línea
 
-class Program
+namespace EternalQuest
 {
-    static void Main(string[] args) => Console.WriteLine("Hello World! This is the EternalQuest Project.");
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Aquí es donde creas el objeto
+            GoalManager manager = new GoalManager();
+            manager.Start();
+        }
+    }
 }
